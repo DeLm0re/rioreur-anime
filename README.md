@@ -8,11 +8,11 @@ This project contains two sub folders :
 
 ## API
 
-[Informations about the API](https://github.com/DeLm0re/rioreur-anime/api)
+[Informations about the API](https://github.com/DeLm0re/rioreur-anime/tree/master/api)
 
 ## Front
 
-[Informations about the front](https://github.com/DeLm0re/rioreur-anime/front)
+[Informations about the front](https://github.com/DeLm0re/rioreur-anime/tree/master/front)
 
 ---
 
