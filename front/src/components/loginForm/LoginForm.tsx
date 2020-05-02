@@ -1,4 +1,5 @@
 import React, { useState, useCallback, useEffect } from 'react';
+import Fade from 'react-reveal/Fade';
 
 import './LoginForm.scss';
 
@@ -36,27 +37,29 @@ const LoginForm: React.FC = () => {
     }, [usernameValue, passwordValue])
 
     return (
-        <div className="loginFormContainer">
-            <form className="loginForm">
-                <div className="loginLogoContainer">
-                    <img className="loginLogo" src={logo} alt="LOGO" />
-                </div>
-                <p className="loginLabel">Enter your username :</p>
-                <div className="loginSecuredInput">
-                    <input className="loginInput" type="text" name="username" placeholder="Username ..." value={usernameValue} onChange={handleChangeUsername}/>
-                    <img className="loginCheck" src={usernameCheck} alt="KO" />
-                </div>
-                <p className="loginLabel">Enter your password :</p>
-                <div className="loginSecuredInput">
-                    <input className="loginInput" type="password" name="password" placeholder="Password ..." value={passwordValue} onChange={handleChangePassword}/>
-                    <img className="loginCheck" src={passwordCheck} alt="KO" />
-                </div>
-                <div className="loginSubmitContainer">
-                    <input className="loginSubmit" type="button" value="Sign in" onClick={handleSubmit} />
-                </div>
-                {badCredentials && (<span className="badCredentials">Bad user credentials.</span>)}
-            </form>
-        </div>
+        <Fade bottom delay={100} duration={2000}>
+            <div className="loginFormContainer">
+                <form className="loginForm">
+                    <div className="loginLogoContainer">
+                        <img className="loginLogo" src={logo} alt="LOGO" />
+                    </div>
+                    <p className="loginLabel">Enter your username :</p>
+                    <div className="loginSecuredInput">
+                        <input className="loginInput" type="text" name="username" placeholder="Username ..." value={usernameValue} onChange={handleChangeUsername}/>
+                        <img className="loginCheck" src={usernameCheck} alt="KO" />
+                    </div>
+                    <p className="loginLabel">Enter your password :</p>
+                    <div className="loginSecuredInput">
+                        <input className="loginInput" type="password" name="password" placeholder="Password ..." value={passwordValue} onChange={handleChangePassword}/>
+                        <img className="loginCheck" src={passwordCheck} alt="KO" />
+                    </div>
+                    <div className="loginSubmitContainer">
+                        <input className="loginSubmit" type="button" value="Sign in" onClick={handleSubmit} />
+                    </div>
+                    {badCredentials && (<span className="badCredentials">Bad user credentials.</span>)}
+                </form>
+            </div>
+        </Fade>
     );
 };
 
