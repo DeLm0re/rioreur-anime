@@ -29,12 +29,12 @@ const LoginForm: React.FC = () => {
         console.log(passwordValue);
         setBadCredentials(!badCredentials);
         // ---------------------------
-    }, [usernameValue, passwordValue, badCredentials])
+    }, [usernameValue, passwordValue, badCredentials]);
 
     useEffect(() => {
         usernameValue !== '' ? setUsernameCheck(okCheck) : setUsernameCheck(koCheck);
         passwordValue !== '' ? setPasswordCheck(okCheck) : setPasswordCheck(koCheck);
-    }, [usernameValue, passwordValue])
+    }, [usernameValue, passwordValue]);
 
     return (
         <Fade bottom delay={100} duration={2000}>

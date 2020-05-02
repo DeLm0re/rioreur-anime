@@ -1,14 +1,32 @@
+.videoButton {
+    position: fixed;
+    top: 0;
+    left: 0;
+    max-width: 25px;
+    margin: 10px;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: 0.7s all;
+    &:hover {
+        transform: scale(1.1);
+        opacity: 0.9;
+    }
+}
 .backgroundVideo {
     position: fixed;
     top: 0;
     left: 0;
     min-width: 100vw;
     min-height: 100vh;
-    z-index: -100;
+    z-index: -10;
     background-color: black;
     .video {
         min-width: 100%;
         min-height: 100%;
         opacity: 0.5;
+        transition: 0.7s all;
+    }
+    .videoPaused {
+        opacity: 0.2;
     }
 }
