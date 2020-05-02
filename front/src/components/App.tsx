@@ -1,11 +1,13 @@
 import React from 'react';
+import BackgroundVideo from './backgroundVideo/BackgroundVideo';
 
 const App: React.FC = () => {
-  return (
-    <div>
-        <p>Hello world</p>
-    </div>
-  );
-}
+    return (
+        <>
+            <p>Hello world</p>
+            <BackgroundVideo />
+        </>
+    );
+};
 
 export default App;
