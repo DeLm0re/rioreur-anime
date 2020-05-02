@@ -1,3 +1,5 @@
+@import '../../styles/var';
+
 .loginFormContainer {
     min-height: 100%;
     display: flex;
@@ -64,6 +66,13 @@
                     border: 2px solid whitesmoke;
                 }
             }
+        }
+        .badCredentials {
+            font-size: 15px;
+            padding: 10px 0 0 0;
+            text-align: center;
+            font-weight: bold;
+            color: $softRed;
         }
     }
 }
